@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> portfolio </title>
+
+	<style>
+		.myDiv {
+			display: none;
+			/* Initially hide all divs */
+			margin-bottom: 20px;
+		}
+
+		html {
+			width: 80vw;
+			height: 80vh;
+			background-color: rgb(177, 176, 176);
+			padding: 50px;
+		}
+
+
+		.chat-message {
+			position: relative;
+			font-size: 0;
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+
+		.chat-message-effect {
+			position: absolute;
+		}
+
+		.chat-message-bubble {
+			display: inline-block;
+			font-size: 14px;
+			max-width: 350px;
+			background: #fff;
+			padding: 8px 14px;
+			border-radius: 18px;
+			min-width: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="chat-messages">
+		<ol class="chat-messages-list">
+			<li class="chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					Hey 👋
+				</div>
+			</li>
+			<li class="chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					I`m prthamesh pavale.
+				</div>
+			</li>
+			<li class="chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					Highly motivated recent Computer Application graduate with a passion for building user-centric web
+					applications.
+				</div>
+			</li>
+			<li class="chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					Eager to leverage my skills and contribute to a growing team by actively participating
+					in projects and learning new technologies.
+				</div>
+			</li>
+			<li " class=" chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					Get in touch:
+				</div>
+			</li>
+			<li class="chat-message chat-message-friend myDiv">
+				<div class="chat-message-bubble">
+					<a href="https://github.com/prathameshvpawale">Github</a><br>
+					<a href="https://www.linkedin.com/in/prathamesh-pavale-a612832a8">Linkedin</a><br>
+					<a href="https://twitter.com/pratham_pavale">Twitter</a>
+				</div>
+			</li>
+
+
+		</ol>
+	</div>
+
+	<script>
+		const divs = document.querySelectorAll(".myDiv"); // Get all divs with class "myDiv"
+
+		let delay = 1000; // Initial delay for the first div
+
+		divs.forEach((div, index) => {
+			setTimeout(function () {
+				div.style.display = "block"; // Make the div visible
+			}, delay * index); // Increase delay based on div index
+		});
+		document.body.style.zoom = "120%";
+	</script>
+</body>
+
+</html>
